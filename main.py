@@ -32,7 +32,7 @@ def contact_route():
     contact_form = ContactForm()
     if contact_form.validate_on_submit():
         email_handler = EmailHandler(
-            email="ashishk.krishna@gmail.com",
+            email=os.environ.get("EMAIL", ""),
             password=os.environ.get("PASSWORD", ""),
         )
         email_handler.send_email(contact_form)
@@ -41,4 +41,4 @@ def contact_route():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
