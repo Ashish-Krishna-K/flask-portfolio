@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% set active_page = "projects" %}
+{% block content %}
+<div id="projects-page" class="album">
+    <h1 class="ms-5 my-3">My Projects</h1>
+    <div class="container my-auto">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+                <div class="card text-bg-dark shadow-sm h-100">
+                    <img src="/static/assets/weather-app.png" class="card-img-top"
+                        alt="A screenshot showing the weather app" width="300" height="300">
+                    <div class="card-body">
+                        <h5 class="card-title">Weather App</h5>
+                        <p class="card-text">A basic weather app built with vanilla Typescript, HTML and CSS</p>
+                    </div>
+                    <ul class="list-group list-group-flush border-light">
+                        <li class="list-group-item text-bg-dark">Typescript</li>
+                        <li class="list-group-item text-bg-dark">HTML</li>
+                        <li class="list-group-item text-bg-dark">CSS</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="https://ashish-krishna-k.github.io/Weather-app/" target="_blank"
+                            class="card-link">Visit website</a>
+                        <a href="https://github.com/Ashish-Krishna-K/Weather-app" target="_blank"
+                            class="card-link">Github Repo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card text-bg-dark shadow-sm h-100">
+                    <img src="/static/assets/where-is-waldo.png" class="card-img-top"
+                        alt="A screenshot showing the where's waldo webapp" width="300" height="300">
+                    <div class="card-body">
+                        <h5 class="card-title">Where's Waldo</h5>
+                        <p class="card-text">
+                            A simple photo-tagging app built with NodeJs and Express for backend and
+                            React for Frontend
+                        </p>
+                    </div>
+                    <ul class="list-group list-group-flush border-light">
+                        <li class="list-group-item text-bg-dark">Typescript</li>
+                        <li class="list-group-item text-bg-dark">Backend: Express+NodeJS</li>
+                        <li class="list-group-item text-bg-dark">Frontend: React</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="https://where-is-waldo-emmk.onrender.com/play" target="_blank" class="card-link">Visit
+                            website</a>
+                        <a href="https://github.com/Ashish-Krishna-K/where-is-waldo" target="_blank"
+                            class="card-link">Github Repo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card text-bg-dark shadow-sm h-100">
+                    <img src="/static/assets/blog.png" class="card-img-top"
+                        alt="A screenshot showing the front page of the blog" width="300" height="300">
+                    <div class="card-body">
+                        <h5 class="card-title">Blog</h5>
+                        <p class="card-text">
+                            A simple implementation of a blog which has a Dynamic Client app built with
+                            ExpressJS, a REST API for the backend built with ExpressJS and a CMS built with React.
+                        </p>
+                    </div>
+                    <ul class="list-group list-group-flush border-light">
+                        <li class="list-group-item text-bg-dark">Typescript</li>
+                        <li class="list-group-item text-bg-dark">API: Express+NodeJS</li>
+                        <li class="list-group-item text-bg-dark">Client: Express+NodeJS</li>
+                        <li class="list-group-item text-bg-dark">CMS: React</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="https://blog-client-os1y.onrender.com/" target="_blank" class="card-link">Visit
+                            website</a>
+                        <a href="https://github.com/Ashish-Krishna-K/blog-api" target="_blank" class="card-link">Github
+                            Repo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

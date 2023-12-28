@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{title}}</title>
+        {{bootstrap.load_css()}}
+    </head>
+
+    <body class="d-flex flex-column min-vh-100" style="background-color: #F4EAE0;">
+        <header class="sticky-top bg-dark pb-3">
+            <nav class="navbar navbar-expand navbar-dark">
+                <div class="container-fluid">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="{{url_for('home_route')}}"
+                                class="nav-link {% if active_page == 'home' %}active{%endif%}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{url_for('projects_route')}}"
+                                class="nav-link {% if active_page == 'projects' %}active{%endif%}">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{url_for('contact_route')}}"
+                                class="nav-link {% if active_page == 'contact' %}active{%endif%}">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="flex-grow-1">
+            {% block content %}{% endblock %}
+        </main>
+        <footer class="sticky-bottom pt-3 bg-dark">
+            <p class="text-center text-secondary">
+                Project by
+                <a href="https://github.com/Ashish-Krishna-K" target="_blank">Ashish-Krishna-K</a>
+            </p>
+        </footer>
+        {{bootstrap.load_js()}}
+    </body>
+
+</html>

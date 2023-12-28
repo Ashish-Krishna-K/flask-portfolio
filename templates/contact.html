@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% set active_page = "contact" %}
+{% from 'bootstrap5/form.html' import render_form %}
+{% block content %}
+<div id="contact-page" class="h-100 d-flex flex-column align-items-center justify-content-center">
+    {% if title == "Success" %}
+    Your Message is sent!
+    <a href="{{url_for('home_route')}}">Go Home</a>
+    {% else %}
+    <h2>Contact Me</h2>
+    {{render_form(form, extra_classes="w-50", button_style="btn btn-dark")}}
+    {% endif %}
+</div>
+{% endblock %}
